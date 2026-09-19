@@ -1,0 +1,12 @@
+{
+  "authority": {
+    "username": "authority",
+    "display_name": "Authority Operator",
+    "password": "vH3z-6bUCpM2045E_9QmeQ3b"
+  },
+  "employee": {
+    "username": "employee",
+    "display_name": "Maintenance Employee",
+    "password": "TmarU5EnllNDsqe-lzujz7XL"
+  }
+}

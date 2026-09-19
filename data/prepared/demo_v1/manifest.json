@@ -1,0 +1,46 @@
+{
+  "dataset_id": "demo_v1",
+  "source_name": "open_meteo_archive_gridded",
+  "provenance_type": "gridded_reanalysis",
+  "source_urls": [
+    "https://archive-api.open-meteo.com/v1/archive?latitude=30.7333&longitude=76.7794&start_date=2026-08-01&end_date=2026-08-07&hourly=temperature_2m%2Crelative_humidity_2m%2Cpressure_msl&timezone=UTC",
+    "https://archive-api.open-meteo.com/v1/archive?latitude=30.7333&longitude=76.7794&start_date=2026-08-08&end_date=2026-08-14&hourly=temperature_2m%2Crelative_humidity_2m%2Cpressure_msl&timezone=UTC",
+    "https://archive-api.open-meteo.com/v1/archive?latitude=30.7333&longitude=76.7794&start_date=2026-08-15&end_date=2026-08-21&hourly=temperature_2m%2Crelative_humidity_2m%2Cpressure_msl&timezone=UTC",
+    "https://archive-api.open-meteo.com/v1/archive?latitude=30.7333&longitude=76.7794&start_date=2026-08-22&end_date=2026-08-28&hourly=temperature_2m%2Crelative_humidity_2m%2Cpressure_msl&timezone=UTC",
+    "https://archive-api.open-meteo.com/v1/archive?latitude=30.7046&longitude=76.7179&start_date=2026-08-01&end_date=2026-08-07&hourly=temperature_2m%2Crelative_humidity_2m%2Cpressure_msl&timezone=UTC",
+    "https://archive-api.open-meteo.com/v1/archive?latitude=30.7046&longitude=76.7179&start_date=2026-08-08&end_date=2026-08-14&hourly=temperature_2m%2Crelative_humidity_2m%2Cpressure_msl&timezone=UTC",
+    "https://archive-api.open-meteo.com/v1/archive?latitude=30.7046&longitude=76.7179&start_date=2026-08-15&end_date=2026-08-21&hourly=temperature_2m%2Crelative_humidity_2m%2Cpressure_msl&timezone=UTC",
+    "https://archive-api.open-meteo.com/v1/archive?latitude=30.7046&longitude=76.7179&start_date=2026-08-22&end_date=2026-08-28&hourly=temperature_2m%2Crelative_humidity_2m%2Cpressure_msl&timezone=UTC",
+    "https://archive-api.open-meteo.com/v1/archive?latitude=30.6942&longitude=76.8606&start_date=2026-08-01&end_date=2026-08-07&hourly=temperature_2m%2Crelative_humidity_2m%2Cpressure_msl&timezone=UTC",
+    "https://archive-api.open-meteo.com/v1/archive?latitude=30.6942&longitude=76.8606&start_date=2026-08-08&end_date=2026-08-14&hourly=temperature_2m%2Crelative_humidity_2m%2Cpressure_msl&timezone=UTC",
+    "https://archive-api.open-meteo.com/v1/archive?latitude=30.6942&longitude=76.8606&start_date=2026-08-15&end_date=2026-08-21&hourly=temperature_2m%2Crelative_humidity_2m%2Cpressure_msl&timezone=UTC",
+    "https://archive-api.open-meteo.com/v1/archive?latitude=30.6942&longitude=76.8606&start_date=2026-08-22&end_date=2026-08-28&hourly=temperature_2m%2Crelative_humidity_2m%2Cpressure_msl&timezone=UTC",
+    "https://archive-api.open-meteo.com/v1/archive?latitude=30.3782&longitude=76.7767&start_date=2026-08-01&end_date=2026-08-07&hourly=temperature_2m%2Crelative_humidity_2m%2Cpressure_msl&timezone=UTC",
+    "https://archive-api.open-meteo.com/v1/archive?latitude=30.3782&longitude=76.7767&start_date=2026-08-08&end_date=2026-08-14&hourly=temperature_2m%2Crelative_humidity_2m%2Cpressure_msl&timezone=UTC",
+    "https://archive-api.open-meteo.com/v1/archive?latitude=30.3782&longitude=76.7767&start_date=2026-08-15&end_date=2026-08-21&hourly=temperature_2m%2Crelative_humidity_2m%2Cpressure_msl&timezone=UTC",
+    "https://archive-api.open-meteo.com/v1/archive?latitude=30.3782&longitude=76.7767&start_date=2026-08-22&end_date=2026-08-28&hourly=temperature_2m%2Crelative_humidity_2m%2Cpressure_msl&timezone=UTC",
+    "https://archive-api.open-meteo.com/v1/archive?latitude=30.3398&longitude=76.3869&start_date=2026-08-01&end_date=2026-08-07&hourly=temperature_2m%2Crelative_humidity_2m%2Cpressure_msl&timezone=UTC",
+    "https://archive-api.open-meteo.com/v1/archive?latitude=30.3398&longitude=76.3869&start_date=2026-08-08&end_date=2026-08-14&hourly=temperature_2m%2Crelative_humidity_2m%2Cpressure_msl&timezone=UTC",
+    "https://archive-api.open-meteo.com/v1/archive?latitude=30.3398&longitude=76.3869&start_date=2026-08-15&end_date=2026-08-21&hourly=temperature_2m%2Crelative_humidity_2m%2Cpressure_msl&timezone=UTC",
+    "https://archive-api.open-meteo.com/v1/archive?latitude=30.3398&longitude=76.3869&start_date=2026-08-22&end_date=2026-08-28&hourly=temperature_2m%2Crelative_humidity_2m%2Cpressure_msl&timezone=UTC"
+  ],
+  "retrieved_at": "2026-09-19T08:26:15.118921+00:00",
+  "start": "2026-08-01T00:00:00Z",
+  "end": "2026-08-28T23:00:00Z",
+  "cadence": "1 hour",
+  "pressure_reference": "mean_sea_level",
+  "units": {
+    "temperature_c": "\u00b0C",
+    "pressure_hpa": "hPa",
+    "humidity_pct": "%"
+  },
+  "rows": 10080,
+  "frames": 672,
+  "missing": 0,
+  "hashes": {
+    "observations.csv": "1d74ff4da98e555925e4af376154e608222322d0826aa612009e425a71508559",
+    "stations.json": "7378996b807f31ab3038c6684a25cb958cb75e52e7100e97352d68eb44d7aa04",
+    "peer_links.json": "4b6f8838a648f73be455046d66404084829fec0b2ddb5e91baa4ce329a5c486a",
+    "policy.json": "5baade92644a6e3f8b54174ce528ef860abb75de58bb6ab7e7864ece48d1382c"
+  }
+}

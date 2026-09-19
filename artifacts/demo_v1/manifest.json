@@ -1,0 +1,424 @@
+{
+  "model_version": "hybrid-2.0",
+  "model_type": "IsolationForest + ExtraTrees",
+  "trained_at": "2026-09-19T12:05:46.718474Z",
+  "dataset_id": "demo_v1",
+  "source_name": "open_meteo_archive_gridded",
+  "provenance_type": "gridded_reanalysis",
+  "labels": [
+    "clean",
+    "spike",
+    "freeze",
+    "drift",
+    "bias",
+    "noise",
+    "missing"
+  ],
+  "label_origin": "Fault labels are deterministic simulated transformations of historical gridded observations; no physical failure labels exist.",
+  "feature_order": [
+    "current_scaled",
+    "previous_scaled",
+    "step_scaled",
+    "rolling_mean_scaled",
+    "rolling_std_scaled",
+    "rolling_slope_scaled",
+    "expected_residual_scaled",
+    "peer_level_residual_scaled",
+    "peer_movement_scaled",
+    "repeat_run",
+    "missing",
+    "cross_variable_gap",
+    "residual_persistence_scaled",
+    "isolation_margin",
+    "temperature",
+    "pressure",
+    "humidity"
+  ],
+  "chronological_split_boundaries": {
+    "train": {
+      "start_sequence": 0,
+      "end_sequence_exclusive": 470,
+      "start_timestamp": "2026-08-01T00:00:00Z",
+      "end_timestamp": "2026-08-20T13:00:00Z"
+    },
+    "validation": {
+      "start_sequence": 470,
+      "end_sequence_exclusive": 571,
+      "start_timestamp": "2026-08-20T14:00:00Z",
+      "end_timestamp": "2026-08-24T18:00:00Z"
+    },
+    "test": {
+      "start_sequence": 571,
+      "end_sequence_exclusive": 672,
+      "start_timestamp": "2026-08-24T19:00:00Z",
+      "end_timestamp": "2026-08-28T23:00:00Z"
+    }
+  },
+  "sample_counts": {
+    "train": {
+      "clean": 6690,
+      "spike": 120,
+      "freeze": 600,
+      "drift": 600,
+      "bias": 600,
+      "noise": 600,
+      "missing": 600
+    },
+    "validation": {
+      "clean": 1155,
+      "spike": 21,
+      "freeze": 105,
+      "drift": 105,
+      "bias": 105,
+      "noise": 105,
+      "missing": 105
+    },
+    "test": {
+      "clean": 1155,
+      "spike": 21,
+      "freeze": 105,
+      "drift": 105,
+      "bias": 105,
+      "noise": 105,
+      "missing": 105
+    }
+  },
+  "candidate_validation_metrics": {
+    "RandomForest": {
+      "macro_f1": 0.8612,
+      "strict_fault_recall": 0.9432,
+      "false_alarm_rate": 0.0095,
+      "latency_ms_per_reading": 0.04726,
+      "confusion_matrix": [
+        [
+          1144,
+          0,
+          8,
+          2,
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          12,
+          0,
+          0,
+          6,
+          3,
+          0
+        ],
+        [
+          16,
+          0,
+          89,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          10,
+          0,
+          0,
+          94,
+          1,
+          0,
+          0
+        ],
+        [
+          0,
+          15,
+          0,
+          1,
+          87,
+          2,
+          0
+        ],
+        [
+          5,
+          4,
+          0,
+          1,
+          2,
+          93,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          105
+        ]
+      ],
+      "per_class": {
+        "clean": {
+          "precision": 0.9736,
+          "recall": 0.9905,
+          "f1": 0.982
+        },
+        "spike": {
+          "precision": 0.3871,
+          "recall": 0.5714,
+          "f1": 0.4615
+        },
+        "freeze": {
+          "precision": 0.9175,
+          "recall": 0.8476,
+          "f1": 0.8812
+        },
+        "drift": {
+          "precision": 0.9592,
+          "recall": 0.8952,
+          "f1": 0.9261
+        },
+        "bias": {
+          "precision": 0.9062,
+          "recall": 0.8286,
+          "f1": 0.8657
+        },
+        "noise": {
+          "precision": 0.9394,
+          "recall": 0.8857,
+          "f1": 0.9118
+        },
+        "missing": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        }
+      }
+    },
+    "ExtraTrees": {
+      "macro_f1": 0.8688,
+      "strict_fault_recall": 0.9597,
+      "false_alarm_rate": 0.0199,
+      "latency_ms_per_reading": 0.06139,
+      "confusion_matrix": [
+        [
+          1132,
+          0,
+          16,
+          5,
+          0,
+          2,
+          0
+        ],
+        [
+          0,
+          17,
+          0,
+          0,
+          3,
+          1,
+          0
+        ],
+        [
+          10,
+          0,
+          95,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          8,
+          0,
+          0,
+          97,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          21,
+          0,
+          1,
+          83,
+          0,
+          0
+        ],
+        [
+          4,
+          6,
+          0,
+          3,
+          1,
+          91,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          105
+        ]
+      ],
+      "per_class": {
+        "clean": {
+          "precision": 0.9809,
+          "recall": 0.9801,
+          "f1": 0.9805
+        },
+        "spike": {
+          "precision": 0.3864,
+          "recall": 0.8095,
+          "f1": 0.5231
+        },
+        "freeze": {
+          "precision": 0.8559,
+          "recall": 0.9048,
+          "f1": 0.8796
+        },
+        "drift": {
+          "precision": 0.9151,
+          "recall": 0.9238,
+          "f1": 0.9194
+        },
+        "bias": {
+          "precision": 0.954,
+          "recall": 0.7905,
+          "f1": 0.8646
+        },
+        "noise": {
+          "precision": 0.9681,
+          "recall": 0.8667,
+          "f1": 0.9146
+        },
+        "missing": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        }
+      }
+    }
+  },
+  "chosen_model": "ExtraTrees",
+  "held_out_metrics": {
+    "macro_f1": 0.8719,
+    "strict_fault_recall": 0.9505,
+    "false_alarm_rate": 0.0312,
+    "latency_ms_per_reading": 0.06241,
+    "confusion_matrix": [
+      [
+        1119,
+        0,
+        27,
+        4,
+        0,
+        5,
+        0
+      ],
+      [
+        0,
+        21,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        11,
+        0,
+        94,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        10,
+        0,
+        0,
+        94,
+        1,
+        0,
+        0
+      ],
+      [
+        0,
+        21,
+        0,
+        3,
+        81,
+        0,
+        0
+      ],
+      [
+        6,
+        3,
+        0,
+        3,
+        2,
+        91,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        105
+      ]
+    ],
+    "per_class": {
+      "clean": {
+        "precision": 0.9764,
+        "recall": 0.9688,
+        "f1": 0.9726
+      },
+      "spike": {
+        "precision": 0.4667,
+        "recall": 1.0,
+        "f1": 0.6364
+      },
+      "freeze": {
+        "precision": 0.7769,
+        "recall": 0.8952,
+        "f1": 0.8319
+      },
+      "drift": {
+        "precision": 0.9038,
+        "recall": 0.8952,
+        "f1": 0.8995
+      },
+      "bias": {
+        "precision": 0.9643,
+        "recall": 0.7714,
+        "f1": 0.8571
+      },
+      "noise": {
+        "precision": 0.9479,
+        "recall": 0.8667,
+        "f1": 0.9055
+      },
+      "missing": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      }
+    }
+  },
+  "artifact_hashes": {
+    "isolation_forest.joblib": "f0f87399e154c80238da8fc00f6cb67c9336e17d8c7c3d0f7afa259399c89300",
+    "fault_classifier.joblib": "a081599ddaa0f2c2bc7d75e8bd6d12e9583c935e84c7b21e4f852c0c9cf27e80"
+  },
+  "artifact_bytes": {
+    "isolation_forest.joblib": 235846,
+    "fault_classifier.joblib": 4821420
+  },
+  "python": "3.12.14",
+  "scikit_learn": "1.9.1",
+  "limitations": "One gridded historical window with simulated labels. Held-out period is chronological but shares geography and injection design; metrics do not measure physical AWS field accuracy."
+}

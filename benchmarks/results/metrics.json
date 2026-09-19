@@ -1,0 +1,227 @@
+{
+  "dataset_id": "demo_v1",
+  "provenance_type": "gridded_reanalysis",
+  "source_name": "open_meteo_archive_gridded",
+  "held_out_start_sequence": 571,
+  "episode_start_sequence": 623,
+  "episodes": 9,
+  "evaluated_frames": 108,
+  "evaluated_observations": 1620,
+  "clean_observations": 1588,
+  "fault_observations": 32,
+  "full": {
+    "tp": 29,
+    "fp": 4,
+    "fn": 3,
+    "tn": 1584,
+    "precision": 0.8788,
+    "recall": 0.9062,
+    "f1": 0.8923,
+    "false_alarm_rate": 0.0025
+  },
+  "physical_only": {
+    "tp": 14,
+    "fp": 2,
+    "fn": 18,
+    "tn": 1586,
+    "precision": 0.875,
+    "recall": 0.4375,
+    "f1": 0.5833,
+    "false_alarm_rate": 0.0013
+  },
+  "isolation_forest_only": {
+    "tp": 23,
+    "fp": 33,
+    "fn": 9,
+    "tn": 1555,
+    "precision": 0.4107,
+    "recall": 0.7188,
+    "f1": 0.5227,
+    "false_alarm_rate": 0.0208
+  },
+  "per_fault_recall": {
+    "spike": 1.0,
+    "freeze": 0.6667,
+    "drift": 0.8333,
+    "bias": 1.0,
+    "noise": 1.0,
+    "missing": 1.0
+  },
+  "per_fault_precision_recall_f1": {
+    "clean": {
+      "precision": 0.9993,
+      "recall": 0.954,
+      "f1": 0.9762
+    },
+    "spike": {
+      "precision": 0.3333,
+      "recall": 1.0,
+      "f1": 0.5
+    },
+    "freeze": {
+      "precision": 1.0,
+      "recall": 0.8333,
+      "f1": 0.9091
+    },
+    "drift": {
+      "precision": 0.2308,
+      "recall": 1.0,
+      "f1": 0.375
+    },
+    "bias": {
+      "precision": 0.5556,
+      "recall": 0.8333,
+      "f1": 0.6667
+    },
+    "noise": {
+      "precision": 0.4,
+      "recall": 0.6667,
+      "f1": 0.5
+    },
+    "missing": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    },
+    "unknown": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0
+    }
+  },
+  "multiclass_labels": [
+    "clean",
+    "spike",
+    "freeze",
+    "drift",
+    "bias",
+    "noise",
+    "missing",
+    "unknown"
+  ],
+  "multiclass_confusion_matrix": [
+    [
+      1515,
+      1,
+      0,
+      20,
+      4,
+      6,
+      0,
+      42
+    ],
+    [
+      0,
+      2,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      1,
+      0,
+      5,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      6,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      1,
+      0,
+      0,
+      5,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      2,
+      0,
+      0,
+      0,
+      4,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      6,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ]
+  ],
+  "fault_type_macro_f1": 0.7038,
+  "detected_fault_type_accuracy": 0.8966,
+  "decision_confusion": {
+    "clean": {
+      "likely_genuine": 1515,
+      "needs_review": 69,
+      "likely_fault": 4
+    },
+    "spike": {
+      "likely_genuine": 0,
+      "needs_review": 0,
+      "likely_fault": 2
+    },
+    "freeze": {
+      "likely_genuine": 1,
+      "needs_review": 1,
+      "likely_fault": 4
+    },
+    "drift": {
+      "likely_genuine": 0,
+      "needs_review": 1,
+      "likely_fault": 5
+    },
+    "bias": {
+      "likely_genuine": 0,
+      "needs_review": 0,
+      "likely_fault": 6
+    },
+    "noise": {
+      "likely_genuine": 0,
+      "needs_review": 0,
+      "likely_fault": 6
+    },
+    "missing": {
+      "likely_genuine": 0,
+      "needs_review": 6,
+      "likely_fault": 0
+    }
+  },
+  "mean_frame_latency_ms": 72.39,
+  "p95_frame_latency_ms": 93.24,
+  "model_artifact_bytes": 5057266,
+  "limitations": "Injected episodes on later chronological frames not used for training; repeated clean context across episodes. Labels are simulated, not observed physical sensor failures. Shared geography and earlier rule tuning limit external validity."
+}

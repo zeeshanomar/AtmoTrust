@@ -1,0 +1,22 @@
+services:
+  - type: web
+    name: atmotrust
+    runtime: docker
+    plan: free
+    numInstances: 1
+    dockerfilePath: ./Dockerfile
+    healthCheckPath: /api/v1/health
+    envVars:
+      - key: ATMOTRUST_ENV
+        value: hosted
+      - key: ATMOTRUST_LIVE_PROVIDER
+        value: open_meteo
+      - key: ATMOTRUST_COOKIE_SECURE
+        value: "true"
+      - key: ATMOTRUST_DATABASE_PATH
+        value: /tmp/atmotrust.sqlite3
+      - key: ATMOTRUST_FRONTEND_URL
+        fromService:
+          type: web
+          name: atmotrust
+          envVarKey: RENDER_EXTERNAL_URL

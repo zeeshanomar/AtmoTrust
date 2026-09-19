@@ -1,0 +1,37 @@
+[
+  {
+    "station_id": "CHD-01",
+    "name": "Chandigarh",
+    "latitude": 30.7333,
+    "longitude": 76.7794,
+    "criticality": 0.9
+  },
+  {
+    "station_id": "MOH-01",
+    "name": "Mohali",
+    "latitude": 30.7046,
+    "longitude": 76.7179,
+    "criticality": 0.7
+  },
+  {
+    "station_id": "PKL-01",
+    "name": "Panchkula",
+    "latitude": 30.6942,
+    "longitude": 76.8606,
+    "criticality": 0.7
+  },
+  {
+    "station_id": "AMB-01",
+    "name": "Ambala",
+    "latitude": 30.3782,
+    "longitude": 76.7767,
+    "criticality": 0.8
+  },
+  {
+    "station_id": "PTA-01",
+    "name": "Patiala",
+    "latitude": 30.3398,
+    "longitude": 76.3869,
+    "criticality": 0.7
+  }
+]

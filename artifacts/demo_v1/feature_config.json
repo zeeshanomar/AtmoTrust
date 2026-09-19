@@ -1,0 +1,27 @@
+{
+  "feature_order": [
+    "current_scaled",
+    "previous_scaled",
+    "step_scaled",
+    "rolling_mean_scaled",
+    "rolling_std_scaled",
+    "rolling_slope_scaled",
+    "expected_residual_scaled",
+    "peer_level_residual_scaled",
+    "peer_movement_scaled",
+    "repeat_run",
+    "missing",
+    "cross_variable_gap",
+    "residual_persistence_scaled",
+    "isolation_margin",
+    "temperature",
+    "pressure",
+    "humidity"
+  ],
+  "isolation_features": [
+    "absolute_step_scaled",
+    "absolute_expected_residual_scaled",
+    "absolute_spatial_residual_scaled",
+    "repeat_run_scaled"
+  ]
+}

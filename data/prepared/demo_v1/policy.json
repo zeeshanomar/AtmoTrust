@@ -1,0 +1,12 @@
+{
+  "weights": {
+    "physical": 0.15,
+    "temporal": 0.2,
+    "expected": 0.2,
+    "spatial": 0.2,
+    "multivariate": 0.15,
+    "isolation_forest": 0.1
+  },
+  "minimum_evidence_coverage": 0.6,
+  "history_window": 24
+}
